@@ -1,0 +1,26 @@
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Our Works
+      </h1>
+      <h2 class="subtitle">
+        Primary bold subtitle
+      </h2>
+    </div>
+  </div>
+</section>
+<div class="container-fluid">
+  <div class="columns">
+    <div class="column">
+      <ul class="works-list">
+        <li *ngFor="let work of worksArray">
+          <a routerLink="{{work.link}}">{{work.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="column">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

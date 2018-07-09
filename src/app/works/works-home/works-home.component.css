@@ -1,0 +1,11 @@
+.works-list {
+    position: sticky;
+    top: 100px;
+    padding: 1em;
+}
+.works-list li {
+    padding: 1em;
+    background: #f5f5f5;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}

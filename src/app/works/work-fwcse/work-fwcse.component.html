@@ -1,0 +1,22 @@
+<div class="image">
+    <img src="/assets/websites/fwcse/ficcadenti-waggoner-castle-home-page.png" zoom />
+</div>
+<ngx-charts-bar-horizontal
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="data"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+</ngx-charts-bar-horizontal>
+<div class="content">
+    <p>One of the earliest websites we built.</p>
+    <h5>The Frontend</h5>
+    <p>The site was built ontop of WordPress and it is all custom CSS.</p>
+</div>

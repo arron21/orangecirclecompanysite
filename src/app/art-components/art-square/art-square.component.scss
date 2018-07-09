@@ -1,0 +1,42 @@
+:host {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 440px;
+  &:hover {
+    .art-square-container { transform: rotateY(180deg); }
+    .back { backface-visibility: visible !important; }
+    .front { backface-visibility: hidden !important; }
+  }
+}
+.art-square-container {
+  position: relative;
+  margin: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms all;
+  .square {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #00d1b2;
+    z-index: 2;
+  }
+  .front {
+    //backface-visibility: hidden;
+    z-index: 3;
+  }
+  .back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    z-index: 2;
+
+  }
+}
+div {
+  z-index: 2;
+}

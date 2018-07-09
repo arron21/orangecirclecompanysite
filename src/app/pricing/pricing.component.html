@@ -1,0 +1,36 @@
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Pricing
+      </h1>
+      <h2 class="subtitle">
+
+      </h2>
+    </div>
+  </div>
+</section>
+<div class="container pricing-items">
+
+<div class="columns">
+  <div class="column pricing-item has-text-centered" routerLink="coding" (click)="setPricing('code')">
+    <p class="title is-4">Code Consulting</p>
+    <p class="subtitle is-6">Let our experience help save your company time</p>
+  </div>
+  <div class="column pricing-item has-text-centered is-warning" routerLink="copy-writing" (click)="setPricing('copywriting')">
+    <p class="title is-4">Copy Writing</p>
+    <p class="subtitle is-6">Lets face it, writing is hard, not for us though</p>
+  </div>
+  <div class="column pricing-item has-text-centered" (click)="setPricing('art')">
+    <p class="title is-4">Artwork</p>
+    <p class="subtitle is-6">Our Artists are trained in both traditional & digital arts</p>
+  </div>
+  <div class="column pricing-item has-text-centered" (click)="setPricing('website')">
+  <p class="title is-4">Websites</p>
+  <p class="subtitle is-6">Sometimes all you need is a website, we got you covered</p>
+</div>
+</div>
+
+</div>
+
+<router-outlet></router-outlet>

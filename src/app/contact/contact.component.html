@@ -1,0 +1,80 @@
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Contact
+      </h1>
+      <h2 class="subtitle">
+        Leave us a message and we will get right back to you
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="container">
+  <div class="  contact-form">
+  <div class="columns">
+    <div class="column">
+      <div [formGroup]="contactForm">
+
+        <div class="field">
+          <label class="label">Your Name</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" [ngClass]="{'is-danger': contactForm.controls['name'].errors && !contactForm.controls['name'].pristine}" type="text" placeholder="ex: Steve Smith" formControlName="name">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
+          <p class="help is-danger" *ngIf="contactForm.controls['name'].errors && !contactForm.controls['name'].pristine">A name is required</p>
+        </div>
+
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control has-icons-left has-icons-right">
+      <input class="input is-danger" type="email" placeholder="steve@gmail.com" [ngClass]="{'is-danger': contactForm.controls['email'].errors && !contactForm.controls['email'].pristine}" formControlName="email">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right" *ngIf="contactForm.controls['email'].errors && !contactForm.controls['email'].pristine">
+      <i class="fas fa-exclamation-triangle"></i>
+    </span>
+          </div>
+          <p class="help is-danger" *ngIf="contactForm.controls['email'].errors && !contactForm.controls['email'].pristine">This email is invalid</p>
+        </div>
+
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="control">
+            <div class="select">
+              <select formControlName="subject" [ngClass]="{'is-danger': contactForm.controls['subject'].errors && !contactForm.controls['subject'].pristine}">
+                <option *ngFor="let subject of subjects" [value]="subject">{{subject}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Textarea" formControlName="message" [ngClass]="{'is-danger': contactForm.controls['message'].errors && !contactForm.controls['message'].pristine}"></textarea>
+          </div>
+          <p class="help is-danger" *ngIf="contactForm.controls['message'].errors && !contactForm.controls['message'].pristine">We would love to hear what you gotta say</p>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" (click)="submitForm()" [disabled]="contactForm.invalid">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-text" (click)="submitForm()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat est a magna ultricies ornare. Cras iaculis mi in nisl molestie tincidunt. Donec tristique libero ex, vitae ultrices erat convallis nec. Curabitur est felis, tincidunt in vulputate non, pulvinar quis magna. Praesent lobortis ipsum a nibh finibus, a tempor lectus fringilla. Nullam a eros eu dui eleifend gravida. Vestibulum quis erat sit amet ipsum elementum dapibus. Aliquam et fermentum ligula. Morbi ut sagittis turpis. Cras sit amet magna tortor. Aliquam eu venenatis ipsum. Nullam auctor ipsum ut volutpat porttitor. Donec ultrices lacinia diam. Etiam posuere, dolor at malesuada sollicitudin, est elit congue nunc, ut laoreet risus arcu eget mauris.
+      </p>
+    </div>
+  </div>
+  <p>Form value: {{ contactForm.value | json }}</p>
+  </div>
+</section>

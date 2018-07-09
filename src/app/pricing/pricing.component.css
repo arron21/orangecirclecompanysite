@@ -1,0 +1,13 @@
+@import '../../../node_modules/bulma-pricingtable/dist/bulma-pricingtable.min.css';
+
+.pricing-table {
+    padding: 1em;
+}
+
+.pricing-items {
+    margin-top: 3rem;
+}
+.pricing-item {
+    padding: 2rem;
+
+}
