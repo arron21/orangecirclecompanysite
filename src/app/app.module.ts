@@ -26,6 +26,10 @@ import { ContactBtnComponent } from './shared/contact-btn/contact-btn.component'
 import { ArtworkComponent } from './orange-services/artwork/artwork.component';
 import { CopywritingComponent } from './orange-services/copywriting/copywriting.component';
 import { FooterComponent } from './footer/footer.component';
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+
+import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 const appRoutes: Routes = [
     { path: '', component: HomePageComponent, pathMatch: 'full' },
     { path: 'about', component: AboutUsComponent},
@@ -81,7 +85,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    Angulartics2Module.forRoot([Angulartics2GoogleTagManager]),
   ],
   providers: [],
   bootstrap: [AppComponent]
