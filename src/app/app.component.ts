@@ -11,15 +11,9 @@ import {Router, NavigationEnd} from '@angular/router';
 export class AppComponent {
   title = 'app';
   constructor(
-    angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics,
-    angulartics2GoogleTagManager: Angulartics2GoogleTagManager,
+    
     public router: Router
   ) {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        // ga('set', 'page', event.urlAfterRedirects);
-        // ga('send', 'pageview');
-      }
-    });
+    
   }
 }
