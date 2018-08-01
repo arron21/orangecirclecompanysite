@@ -70,6 +70,12 @@ canvas {
 .is-pink:hover {
     background-color: #ff7979;
 }
+.is-lightblue:hover {
+    background-color: #7ed6df;
+}
+.is-grey:hover {
+    background-color: #95afc0;
+}
 
 
 .hidden-tea {

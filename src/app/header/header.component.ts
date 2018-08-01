@@ -32,6 +32,33 @@ export class HeaderComponent implements OnInit {
       },
 
   ];
+
+  public servicesLinks: any = [
+      {
+          label: 'Coding',
+          url: '/coding'
+      },
+      {
+          label: 'Websites',
+          url: '/websites'
+      },
+      {
+          label: 'Consulting',
+          url: '/consulting'
+      },
+      {
+          label: 'SEO',
+          url: '/seo'
+      },
+      {
+          label: 'AdWords',
+          url: '/adwords'
+      },
+      {
+          label: 'Photography',
+          url: '/photography'
+      },
+  ]
   constructor() { }
 
   ngOnInit() {

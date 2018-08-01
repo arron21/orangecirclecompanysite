@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./consulting.component.scss']
 })
 export class ConsultingComponent implements OnInit {
-
+  title: string = 'Consulting'
+  description: string = 'Asking an expert can be an invaluable boost to any business'
   constructor() { }
 
   ngOnInit() {

@@ -29,8 +29,7 @@
             "styles": [
               "src/styles.scss",
               {
-                "input": "./node_modules/bulma/css/bulma.css",
-                "input": "./node_modules/bulma-pricingtable/dist/bulma-pricingtable.min.css"
+                "input": "./node_modules/bulma/css/bulma.css"
               }
             ],
             "scripts": []

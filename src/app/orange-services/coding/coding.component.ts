@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coding.component.scss']
 })
 export class CodingComponent implements OnInit {
-
+  title: string = 'Coding'
+  description: string = 'The future is coding, whether its a website or an application, code controls everything'
   constructor() { }
 
   ngOnInit() {

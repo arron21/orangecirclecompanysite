@@ -1,1 +1,52 @@
 @import "styles/_vendor";
+//@import "styles/_bulma-pricing";
+
+.bg-is-orange {
+  background: #F2994A;
+}
+.bg-is-blue {
+  background-color: #6a9cff;
+}
+.bg-is-yellow {
+  background-color : #f9ca24;
+}
+.bg-is-green{
+  background-color: #badc58;
+}
+.bg-is-purple {
+  background-color: #e056fd;
+}
+.bg-is-pink {
+  background-color: #ff7979;
+}
+.bg-is-lightblue {
+  background-color: #7ed6df;
+}
+.bg-is-grey {
+  background-color: #95afc0;
+}
+
+.is-orange:hover {
+  background: #F2994A;
+}
+.is-blue:hover {
+  background-color: #6a9cff;
+}
+.is-yellow:hover {
+  background-color: #f9ca24;
+}
+.is-green:hover {
+  background-color: #badc58;
+}
+.is-purple:hover {
+  background-color: #e056fd;
+}
+.is-pink:hover {
+  background-color: #ff7979;
+}
+.is-lightblue:hover {
+  background-color: #7ed6df;
+}
+.is-grey:hover {
+  background-color: #95afc0;
+}

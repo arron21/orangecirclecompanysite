@@ -22,6 +22,10 @@ import { AdwordsComponent } from './orange-services/adwords/adwords.component';
 import { SeoComponent } from './orange-services/seo/seo.component';
 import { ConsultingComponent } from './orange-services/consulting/consulting.component';
 import { CodingComponent } from './orange-services/coding/coding.component';
+import { ContactBtnComponent } from './shared/contact-btn/contact-btn.component';
+import { ArtworkComponent } from './orange-services/artwork/artwork.component';
+import { CopywritingComponent } from './orange-services/copywriting/copywriting.component';
+import { FooterComponent } from './footer/footer.component';
 const appRoutes: Routes = [
     { path: '', component: HomePageComponent, pathMatch: 'full' },
     { path: 'about', component: AboutUsComponent},
@@ -31,6 +35,15 @@ const appRoutes: Routes = [
         data: {preload: true}
 
     },
+    { path: 'contact', component: ContactComponent},
+    { path: 'photography', component: PhotographyComponent},
+    { path: 'coding', component: CodingComponent},
+    { path: 'seo', component: SeoComponent},
+    { path: 'adwords', component: AdwordsComponent},
+    { path: 'consulting', component: ConsultingComponent},
+    { path: 'websites', component: WebsitesComponent},
+    { path: 'artwork', component: ArtworkComponent},
+    { path: 'copywriting', component: CopywritingComponent},
     { path: 'contact', component: ContactComponent},
     { path: 'works',
       loadChildren: './works/works.module#WorksModule',
@@ -57,6 +70,11 @@ const appRoutes: Routes = [
     SeoComponent,
     ConsultingComponent,
     CodingComponent,
+    ContactBtnComponent,
+    ArtworkComponent,
+    CopywritingComponent,
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,

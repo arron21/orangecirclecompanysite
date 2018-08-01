@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+h1 {
+    font-size: 5vmin;
+}
+h3 {
+    font-size: 4vmin;
+}
