@@ -1,6 +1,10 @@
 canvas {
     position: absolute;
 }
+
+.background {
+   background: #fafafa;
+}
 .hero-main {
     position: relative;
     overflow: hidden;

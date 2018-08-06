@@ -58,6 +58,14 @@ export class HeaderComponent implements OnInit {
           label: 'Photography',
           url: '/photography'
       },
+      // {
+      //     label: 'Artwork',
+      //     url: '/artwork'
+      // },
+      {
+          label: 'Copywriting',
+          url: '/copywriting'
+      },
   ]
   constructor() { }
 

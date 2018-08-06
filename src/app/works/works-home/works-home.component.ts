@@ -20,14 +20,14 @@ export class WorksHomeComponent implements OnInit {
             name: 'FWCSE',
             link: 'fwcse'
         },
-        {
-            name: 'MW Partners',
-            link: 'mw-partners'
-        },
-        {
-            name: 'Abbott Technologies',
-            link: 'abbott-technologies'
-        },
+        // {
+        //     name: 'MW Partners',
+        //     link: 'mw-partners'
+        // },
+        // {
+        //     name: 'Abbott Technologies',
+        //     link: 'abbott-technologies'
+        // },
 
 
 

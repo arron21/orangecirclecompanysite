@@ -85,9 +85,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule,
-    Angulartics2Module.forRoot([Angulartics2GoogleTagManager]),
-  ],
+    BrowserAnimationsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
