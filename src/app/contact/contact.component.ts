@@ -10,11 +10,14 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
 
+  subject;
   subjects: any = [
       'General Question',
       'Coding',
       'Copywriting',
       'Artwork',
+      'SEO',
+      'AdWords',
       'Websites'
   ];
 
