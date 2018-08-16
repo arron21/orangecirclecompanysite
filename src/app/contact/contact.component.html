@@ -21,19 +21,20 @@
     </div>
   </section>
 
-  <!-- <form class="contact-form" method="POST" name="contact" netlify>
+  <form class="contact-form" method="POST" name="contact">
+    <input type="hidden" name="form-name" value="contact" />
 
     <div class="field">
       <label class="label">Name</label>
       <div class="control">
-        <input class="input" type="text" placeholder="Hi, who are you?">
+        <input class="input" name="name" type="text" placeholder="Hi, who are you?">
       </div>
     </div>
 
     <div class="field">
       <label class="label">Email</label>
       <div class="control has-icons-left has-icons-right">
-        <input class="input " type="email" placeholder="So we can email you back" value="">
+        <input class="input" name="email" type="email" placeholder="So we can email you back" value="">
         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
         </span>
@@ -47,10 +48,7 @@
       <label class="label">Subject</label>
       <div class="control">
         <div class="select">
-          <select 
-          [(ngModel)]="subject" 
-          [ngModelOptions]="{standalone: true}"
-          [ngClass]="{'is-danger': contactForm.controls['subject'].errors && !contactForm.controls['subject'].pristine}">
+          <select [(ngModel)]="subject" name="subject" [ngModelOptions]="{standalone: true}" [ngClass]="{'is-danger': contactForm.controls['subject'].errors && !contactForm.controls['subject'].pristine}">
             <option *ngFor="let subject of subjects" [value]="subject">{{subject}}</option>
           </select>
         </div>
@@ -60,11 +58,11 @@
     <div class="field">
       <label class="label">Message</label>
       <div class="control">
-        <textarea class="textarea" placeholder="Textarea"></textarea>
+        <textarea class="textarea" name="message" placeholder="Textarea"></textarea>
       </div>
     </div>
 
-    
+
     <div class="field is-grouped">
       <div class="control">
         <button class="button is-link" type="submit">Submit</button>
@@ -74,4 +72,4 @@
       </div>
     </div>
 
-  </form> -->
+  </form>
