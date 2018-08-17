@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-contact',
@@ -47,7 +48,12 @@ export class ContactComponent implements OnInit {
     // console.log(this.contactForm);
     // console.log(this.contactForm.value);
 
-    this.http.post('/', { 'form-name': 'contact', ...this.contactForm.value }).subscribe(
+
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    const options = new RequestOptions({headers: headers});
+
+    this.http.post('/', { 'form-name': 'contact', ...this.contactForm.value }, options).subscribe(
       res => {
         console.log(res);
       },

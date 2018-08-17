@@ -13,8 +13,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HomeCodingComponent } from './home-coding/home-coding.component';
-import {ReactiveFormsModule, FormsModule} from "@angular/forms";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ArtSquareComponent } from './art-components/art-square/art-square.component';
 import { WebsitesComponent } from './orange-services/websites/websites.component';
 import { PhotographyComponent } from './orange-services/photography/photography.component';
@@ -32,29 +32,30 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 const appRoutes: Routes = [
-    { path: '', component: HomePageComponent, pathMatch: 'full' },
-    { path: 'about', component: AboutUsComponent},
-    {
-        path: 'pricing',
-        loadChildren: './pricing/pricing.module#PricingModule',
-        data: {preload: true}
+  { path: '', component: HomePageComponent, pathMatch: 'full' },
+  { path: 'about', component: AboutUsComponent },
+  {
+    path: 'pricing',
+    loadChildren: './pricing/pricing.module#PricingModule',
+    data: { preload: true }
 
-    },
-    { path: 'contact', component: ContactComponent},
-    { path: 'photography', component: PhotographyComponent},
-    { path: 'coding', component: CodingComponent},
-    { path: 'seo', component: SeoComponent},
-    { path: 'adwords', component: AdwordsComponent},
-    { path: 'consulting', component: ConsultingComponent},
-    { path: 'websites', component: WebsitesComponent},
-    { path: 'artwork', component: ArtworkComponent},
-    { path: 'copywriting', component: CopywritingComponent},
-    { path: 'contact', component: ContactComponent},
-    { path: 'works',
-      loadChildren: './works/works.module#WorksModule',
-      data: {preload: true}
-    },
-    { path: '**', component: PageNotFoundComponent }
+  },
+  { path: 'contact', component: ContactComponent },
+  { path: 'photography', component: PhotographyComponent },
+  { path: 'coding', component: CodingComponent },
+  { path: 'seo', component: SeoComponent },
+  { path: 'adwords', component: AdwordsComponent },
+  { path: 'consulting', component: ConsultingComponent },
+  { path: 'websites', component: WebsitesComponent },
+  { path: 'artwork', component: ArtworkComponent },
+  { path: 'copywriting', component: CopywritingComponent },
+  { path: 'contact', component: ContactComponent },
+  {
+    path: 'works',
+    loadChildren: './works/works.module#WorksModule',
+    data: { preload: true }
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 
@@ -89,7 +90,7 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
