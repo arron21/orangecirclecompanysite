@@ -28,6 +28,7 @@ import { CopywritingComponent } from './orange-services/copywriting/copywriting.
 import { FooterComponent } from './footer/footer.component';
 import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import { HttpClientModule } from '@angular/common/http';
 
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 const appRoutes: Routes = [
@@ -83,6 +84,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),

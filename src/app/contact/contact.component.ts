@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +23,10 @@ export class ContactComponent implements OnInit {
   ];
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient
+  ) {
     this.createForm();
   }
 
@@ -33,14 +37,24 @@ export class ContactComponent implements OnInit {
   createForm() {
       this.contactForm = this.fb.group({
           name: ['', Validators.required  ],
-          email: ['', Validators.required, Validators.email  ],
+          email: ['', [Validators.required, Validators.email]  ],
           subject: [this.subjects[0] || '', Validators.required  ],
-          message: ['', Validators.required, Validators.minLength(20)  ],
+          message: ['', Validators.required  ],
       });
   }
 
   submitForm() {
-    console.log(this.contactForm);
+    // console.log(this.contactForm);
+    // console.log(this.contactForm.value);
+
+    this.http.post('/', { 'form-name': 'contact', ...this.contactForm.value }).subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }
