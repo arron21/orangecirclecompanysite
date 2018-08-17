@@ -23,6 +23,7 @@
     "@ng-bootstrap/ng-bootstrap": "^2.0.0-alpha.0",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "@swimlane/ngx-charts": "^8.0.2",
+    "angular": "^1.7.3",
     "angulartics2": "^6.2.0",
     "animejs": "^2.2.0",
     "bootstrap": "^4.1.1",

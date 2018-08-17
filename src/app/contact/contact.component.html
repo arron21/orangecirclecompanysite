@@ -21,7 +21,7 @@
     </div>
   </section>
 
-  <form class="contact-form" method="POST" name="contact" netlify>
+  <form [formGroup]="contactForm" class="contact-form" method="POST" name="contact" netlify (submit)="submitForm()">
     <input type="hidden" name="form-name" value="contact" />
     <div class="field">
       <label class="label">Name</label>

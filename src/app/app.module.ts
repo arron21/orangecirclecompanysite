@@ -13,8 +13,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { HomeCodingComponent } from './home-coding/home-coding.component';
-import {ReactiveFormsModule, FormsModule} from "@angular/forms";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ArtSquareComponent } from './art-components/art-square/art-square.component';
 import { WebsitesComponent } from './orange-services/websites/websites.component';
 import { PhotographyComponent } from './orange-services/photography/photography.component';
@@ -30,6 +30,7 @@ import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
+import { HttpClientModule } from '@angular/common/http';
 const appRoutes: Routes = [
     { path: '', component: HomePageComponent, pathMatch: 'full' },
     { path: 'about', component: AboutUsComponent},
@@ -84,6 +85,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule

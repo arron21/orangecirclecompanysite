@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +23,10 @@ export class ContactComponent implements OnInit {
   ];
 
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private http: HttpClient,
+    private fb: FormBuilder
+  ) {
     this.createForm();
   }
 
@@ -41,6 +45,15 @@ export class ContactComponent implements OnInit {
 
   submitForm() {
     console.log(this.contactForm);
+    const headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    const body = this.contactForm.value;
+    this.http.post('/', body, {headers: headers}).pipe(
+
+    ).subscribe(
+      res => {
+        console.log(res);
+      }
+    );
   }
 
 }
