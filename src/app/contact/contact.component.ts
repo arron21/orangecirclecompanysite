@@ -48,10 +48,17 @@ export class ContactComponent implements OnInit {
     // console.log(this.contactForm.value);
 
 
-    const headers = new HttpHeaders()
-      .append('Content-Type', 'application/x-www-form-urlencoded');
-    const params = new HttpParams({ fromObject: this.contactForm.value });
-    this.http.post('/', { params }, { headers })
+    // const headers = new HttpHeaders()
+    //   .append('Content-Type', 'application/x-www-form-urlencoded');
+    // const params = new HttpParams();
+
+
+    // params.set('name', this.contactForm.value.name);
+    // params.set('email', this.contactForm.value.email);
+    // params.set('subject', this.contactForm.value.subject);
+    // params.set('message', this.contactForm.value.message);
+    const body = `name=${this.contactForm.value.name}&email=${this.contactForm.value.email}&subject=${this.contactForm.value.subject}&message=${this.contactForm.value.message}`;
+    this.http.post('/', body)
       .subscribe(
         res => {
           console.log(res);
