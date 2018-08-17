@@ -58,7 +58,7 @@ export class ContactComponent implements OnInit {
     // params.set('subject', this.contactForm.value.subject);
     // params.set('message', this.contactForm.value.message);
     const body = `name=${this.contactForm.value.name}&email=${this.contactForm.value.email}&subject=${this.contactForm.value.subject}&message=${this.contactForm.value.message}`;
-    this.http.post('/success', body)
+    this.http.post('/success', body, {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }})
       .subscribe(
         res => {
           console.log(res);
