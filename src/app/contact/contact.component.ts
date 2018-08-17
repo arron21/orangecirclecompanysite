@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { HttpClient, HttpHeaders, HttpRequest  } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -13,13 +13,13 @@ export class ContactComponent implements OnInit {
 
   subject;
   subjects: any = [
-      'General Question',
-      'Coding',
-      'Copywriting',
-      'Artwork',
-      'SEO',
-      'AdWords',
-      'Websites'
+    'General Question',
+    'Coding',
+    'Copywriting',
+    'Artwork',
+    'SEO',
+    'AdWords',
+    'Websites'
   ];
 
 
@@ -35,12 +35,12 @@ export class ContactComponent implements OnInit {
   }
 
   createForm() {
-      this.contactForm = this.fb.group({
-          name: ['', Validators.required  ],
-          email: ['', [Validators.required, Validators.email]  ],
-          subject: [this.subjects[0] || '', Validators.required  ],
-          message: ['', Validators.required  ],
-      });
+    this.contactForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      subject: [this.subjects[0] || '', Validators.required],
+      message: ['', Validators.required],
+    });
   }
 
   submitForm() {
@@ -48,18 +48,18 @@ export class ContactComponent implements OnInit {
     // console.log(this.contactForm.value);
 
 
-    const headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    // const options = new RequestOptions({headers: headers});
-
-    this.http.post('/', { 'form-name': 'contact', ...this.contactForm.value }, { headers: headers}).subscribe(
-      res => {
-        console.log(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+    const headers = new HttpHeaders()
+      .append('Content-Type', 'application/x-www-form-urlencoded');
+    const params = new HttpParams({ fromObject: this.contactForm.value });
+    this.http.post('/', { params }, { headers })
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.error(err);
+        }
+      );
   }
 
 }
