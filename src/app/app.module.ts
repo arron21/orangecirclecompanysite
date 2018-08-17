@@ -31,6 +31,7 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import { HttpClientModule } from '@angular/common/http';
 
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
+import { SuccessComponent } from './success/success.component';
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent, pathMatch: 'full' },
   { path: 'about', component: AboutUsComponent },
@@ -49,7 +50,7 @@ const appRoutes: Routes = [
   { path: 'websites', component: WebsitesComponent },
   { path: 'artwork', component: ArtworkComponent },
   { path: 'copywriting', component: CopywritingComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: SuccessComponent },
   {
     path: 'works',
     loadChildren: './works/works.module#WorksModule',
@@ -80,6 +81,7 @@ const appRoutes: Routes = [
     ArtworkComponent,
     CopywritingComponent,
     FooterComponent,
+    SuccessComponent,
 
   ],
   imports: [
