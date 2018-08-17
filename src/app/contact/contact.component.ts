@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit {
 
 
     const headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
+    headers.append('Content-Type', 'application/x-www-form-urlencoded');
     // const options = new RequestOptions({headers: headers});
 
     this.http.post('/', { 'form-name': 'contact', ...this.contactForm.value }, { headers: headers}).subscribe(
