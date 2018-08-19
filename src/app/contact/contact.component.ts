@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders, HttpRequest, HttpParams } from '@angular/common/http';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -62,9 +63,23 @@ export class ContactComponent implements OnInit {
       .subscribe(
         res => {
           console.log(res);
+          swal({
+            title: 'Sent!',
+            text: 'We have recieved your message.',
+            type: 'success',
+            confirmButtonText: 'Cool'
+          });
+
+          this.contactForm.reset();
         },
         err => {
           console.error(err);
+          swal({
+            title: 'Uh Oh!',
+            text: 'Something wen\'t wrong.',
+            type: 'error',
+            confirmButtonText: 'Close'
+          });
         }
       );
   }
