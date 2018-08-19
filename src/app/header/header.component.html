@@ -4,7 +4,7 @@
     <a class="navbar-item" routerLink="">
       <img src="/assets/orange-tech-consulting-large.png" alt="Orange Tech Consulting">
     </a>
-    <a role="button" class="navbar-burger" aria-label="menu" (click)="toggleNav()" [ngClass]="{'is-active': navActive}" data-target="navMenu" aria-expanded="false">
+    <a role="button" class="navbar-burger" #navBurger aria-label="menu" (click)="toggleNav()" [ngClass]="{'is-active': navActive}" data-target="navMenu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>

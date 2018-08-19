@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -68,7 +68,8 @@ export class HeaderComponent implements OnInit {
       },
   ]
 
-  @ViewChild('navMenu') navMenu;
+  @ViewChild('navMenu') navMenu: ElementRef;
+  @ViewChild('navBurger') navBurger: ElementRef;
   constructor() { }
 
   ngOnInit() {
@@ -84,7 +85,12 @@ export class HeaderComponent implements OnInit {
   }
 
   linkClicked(link) {
-    this.navMenu.classList.remove('is-active');
+    console.log(this.navMenu);
+    console.log(this.navMenu.nativeElement);
+    const el: HTMLElement = this.navBurger.nativeElement as HTMLElement;
+    el.click();
+    // this.navMenu.nativeElement.classList.remove('is-active');
+    // this.navBurger.nativeElement.classList.remove('is-active');
   }
 
 }
