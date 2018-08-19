@@ -59,27 +59,26 @@ export class ContactComponent implements OnInit {
     // params.set('subject', this.contactForm.value.subject);
     // params.set('message', this.contactForm.value.message);
     const body = `form-name=contact&name=${this.contactForm.value.name}&email=${this.contactForm.value.email}&subject=${this.contactForm.value.subject}&message=${this.contactForm.value.message}`;
-    this.http.post('/', body, {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }})
+    this.http.post('/', body, {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).pipe()
       .subscribe(
         res => {
+          if (res['status'] === 200) {
+            swal({
+              title: 'Sent!',
+              text: 'We have recieved your message.',
+              type: 'success',
+              confirmButtonText: 'Cool'
+            });
+            this.contactForm.reset();
+          } else {
+            swal({
+              title: 'Uh Oh!',
+              text: 'Something wen\'t wrong.',
+              type: 'error',
+              confirmButtonText: 'Close'
+            });
+          }
           console.log(res);
-          swal({
-            title: 'Sent!',
-            text: 'We have recieved your message.',
-            type: 'success',
-            confirmButtonText: 'Cool'
-          });
-
-          this.contactForm.reset();
-        },
-        err => {
-          console.error(err);
-          swal({
-            title: 'Uh Oh!',
-            text: 'Something wen\'t wrong.',
-            type: 'error',
-            confirmButtonText: 'Close'
-          });
         }
       );
   }
