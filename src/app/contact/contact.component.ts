@@ -48,6 +48,16 @@ export class ContactComponent implements OnInit {
     // console.log(this.contactForm);
     // console.log(this.contactForm.value);
 
+    const body = new HttpParams()
+    .set('form-name', 'contact')
+    .append('name', this.contactForm.value.name)
+    .append('email', this.contactForm.value.email)
+    .append('subject', this.contactForm.value.subject)
+    .append('message', this.contactForm.value.message);
+
+    console.log('TEST');
+    console.log(body);
+
 
     // const headers = new HttpHeaders()
     //   .append('Content-Type', 'application/x-www-form-urlencoded');
@@ -58,8 +68,8 @@ export class ContactComponent implements OnInit {
     // params.set('email', this.contactForm.value.email);
     // params.set('subject', this.contactForm.value.subject);
     // params.set('message', this.contactForm.value.message);
-    const body = `form-name=contact&name=${this.contactForm.value.name}&email=${this.contactForm.value.email}&subject=${this.contactForm.value.subject}&message=${this.contactForm.value.message}`;
-    this.http.post('/', body, {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).pipe()
+    // const body = `form-name=contact&name=${this.contactForm.value.name}&email=${this.contactForm.value.email}&subject=${this.contactForm.value.subject}&message=${this.contactForm.value.message}`;
+    this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).pipe()
       .subscribe(
         res => {
           if (res['status'] === 200) {
