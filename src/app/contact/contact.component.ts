@@ -49,7 +49,7 @@ export class ContactComponent implements OnInit {
     // console.log(this.contactForm.value);
 
     const body = new HttpParams()
-    .set('form-name', 'contact')
+    .set('form-name', 'contactTEST')
     .append('name', this.contactForm.value.name)
     .append('email', this.contactForm.value.email)
     .append('subject', this.contactForm.value.subject)
