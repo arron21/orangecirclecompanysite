@@ -17,6 +17,10 @@ export class WorksHomeComponent implements OnInit {
             link: 'special-olympics'
         },
         {
+            name: 'Cast of Crowns',
+            link: 'cast-of-crowns'
+        },
+        {
             name: 'FWCSE',
             link: 'fwcse'
         },

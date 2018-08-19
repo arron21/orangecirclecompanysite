@@ -32,6 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 import { SuccessComponent } from './success/success.component';
+import {ImageZoomModule} from 'angular2-image-zoom';
+
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent, pathMatch: 'full' },
   { path: 'about', component: AboutUsComponent },
@@ -91,7 +93,9 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ImageZoomModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
