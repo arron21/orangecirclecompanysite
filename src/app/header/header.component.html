@@ -10,15 +10,15 @@
       <span aria-hidden="true"></span>
     </a>
   </div>
-    <div class="navbar-menu" [ngClass]="{'is-active': navActive}" id="navMenu">
+    <div class="navbar-menu" [ngClass]="{'is-active': navActive}" id="navMenu" #navMenu>
       <div class="navbar-end">
-        <a class="navbar-item" [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngFor="let link of links">{{link.label}}</a>
+        <a class="navbar-item" (click)="linkClicked(link)" [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngFor="let link of links">{{link.label}}</a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             Services
           </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngFor="let link of servicesLinks">{{link.label}}</a>
+            <a class="navbar-item" (click)="linkClicked(link)" [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngFor="let link of servicesLinks">{{link.label}}</a>
           </div>
         </div>
       </div>
