@@ -79,6 +79,24 @@ export class ContactComponent implements OnInit {
             });
           }
           console.log(res);
+        },
+        err => {
+          if (err['status'] === 200) {
+            swal({
+              title: 'Sent!',
+              text: 'We have recieved your message.',
+              type: 'success',
+              confirmButtonText: 'Cool'
+            });
+            this.contactForm.reset();
+          } else {
+            swal({
+              title: 'Uh Oh!',
+              text: 'Something wen\'t wrong.',
+              type: 'error',
+              confirmButtonText: 'Close'
+            });
+          }
         }
       );
   }
