@@ -9,7 +9,7 @@ import { WorkMwPartnersComponent } from './work-mw-partners/work-mw-partners.com
 import { WorkAbbottTechnologiesComponent } from './work-abbott-technologies/work-abbott-technologies.component';
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { WorkCastOfCrownsComponent } from './work-cast-of-crowns/work-cast-of-crowns.component';
-import {ImageZoomModule} from 'angular2-image-zoom';
+import { ImageZoomModule } from 'angular2-image-zoom';
 
 const projectRoutes: Routes = [
     {

@@ -32,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
 import { SuccessComponent } from './success/success.component';
-import {ImageZoomModule} from 'angular2-image-zoom';
+import { ImageZoomModule } from 'angular2-image-zoom';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent, pathMatch: 'full' },
