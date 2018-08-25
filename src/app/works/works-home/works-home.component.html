@@ -13,12 +13,16 @@
 <div class="container-fluid">
   <div class="columns">
     <div class="column">
-      <ul class="works-list">
-        <li *ngFor="let work of worksArray">
-          <a routerLink="{{work.link}}">{{work.name}}</a>
-        </li>
-      </ul>
+      <div class="horizontal-container">
+        <ul class="works-list">
+          <li *ngFor="let work of worksArray">
+            <a class="button" routerLinkActive="is-primary" routerLink="{{work.link}}">{{work.name}}</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <div class="container-fluid">
     <div class="column">
       <router-outlet></router-outlet>
     </div>

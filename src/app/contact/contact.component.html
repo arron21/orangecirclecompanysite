@@ -34,9 +34,6 @@
         <span class="icon is-small is-left">
           <i class="fas fa-envelope"></i>
         </span>
-        <span class="icon is-small is-right">
-          <i class="fas fa-exclamation-triangle"></i>
-        </span>
       </div>
     </div>
 
@@ -54,7 +51,7 @@
     <div class="field">
       <label class="label">Message</label>
       <div class="control">
-        <textarea class="textarea" name="message" formControlName="message" placeholder="Textarea"></textarea>
+        <textarea class="textarea" name="message" formControlName="message" placeholder="Please tell us more about your next project"></textarea>
       </div>
     </div>
 
@@ -64,7 +61,6 @@
         <button class="button is-link" type="submit" [disabled]="!contactForm.valid">Submit</button>
       </div>
       <div class="control">
-        <button class="button is-text">Cancel</button>
       </div>
     </div>
 
