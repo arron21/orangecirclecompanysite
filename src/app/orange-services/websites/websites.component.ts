@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebsitesComponent implements OnInit {
   title: string = 'Websites'
-  description: string = 'Your website should be a reflection of your business'
+  description: string = 'Affordable high quality web design and development'
   constructor() { }
 
   ngOnInit() {

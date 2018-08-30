@@ -9,6 +9,13 @@ h2.subtitle {
 }
 .background {
   background: #fafafa;
+  position: relative;
+}
+.crazy-svg {
+  position: absolute;
+  bottom: 99%;
+  height: 150px;
+  width: 100%;
 }
 .hero-main {
   position: relative;
@@ -35,8 +42,12 @@ h2.subtitle {
   }
 }
 
+.motto {
+  color: hsl(0, 0%, 29%);
+}
 .pushing-up {
   margin-top: -10%;
+  transform: translateY(-90px);
 }
 
 .round-tile {
@@ -111,3 +122,14 @@ h2.subtitle {
 .description {
   font-weight: bold;
 }
+
+
+  blockquote {
+    font-size: 2em;
+    font-style: italic;
+  }
+
+  .height-auto {
+    height: auto;
+    padding: 3em;
+  }
