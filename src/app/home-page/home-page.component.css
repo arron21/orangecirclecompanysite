@@ -6,6 +6,7 @@
   background-size: cover;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 }
 .orange-scroll .word {
   font-size: 45vh;
