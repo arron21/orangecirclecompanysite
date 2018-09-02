@@ -1,3 +1,21 @@
+.orange-scroll {
+  height: calc(100vh - 52px);
+  background-image: url('/assets/ocean/beach-bird-s-eye-view-daytime-861191-small.jpeg');
+  background-color: #F2994A;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+.orange-scroll .word {
+  font-size: 45vh;
+  line-height: 35vh;
+  mix-blend-mode: overlay;
+  will-change: transform;
+  /* position: absolute; */
+  /* transition: 100ms all; */
+}
+
 canvas {
   position: absolute;
 }

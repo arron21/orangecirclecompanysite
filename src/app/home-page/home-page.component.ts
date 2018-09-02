@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener, Inject, ElementRef } from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-home-page',
@@ -7,12 +8,22 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-        constructor() { }
+    @ViewChild('word') word;
+    push;
+    constructor(
+        @Inject(DOCUMENT) private document: Document,
+        public el: ElementRef,
+    ) { }
 
     ngOnInit() {
 
         this.drawCanvas();
     }
+
+    @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
+        const scrollPosition = window.pageYOffset;
+        this.push = scrollPosition;
+      }
 
     @HostListener('window:resize', ['$event'])
     onResize(event) {
