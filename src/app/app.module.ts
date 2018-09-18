@@ -1,3 +1,5 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -86,8 +88,11 @@ const appRoutes: Routes = [
     SuccessComponent,
 
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+    
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -98,6 +103,5 @@ const appRoutes: Routes = [
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

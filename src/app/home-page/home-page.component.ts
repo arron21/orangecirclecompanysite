@@ -1,3 +1,4 @@
+import { WINDOW } from '@ng-toolkit/universal';
 import { Component, OnInit, ViewChild, HostListener, Inject, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
@@ -10,7 +11,7 @@ export class HomePageComponent implements OnInit {
 
     @ViewChild('word') word;
     push;
-    constructor(
+    constructor(@Inject(WINDOW) private window: Window, 
         @Inject(DOCUMENT) private document: Document,
         public el: ElementRef,
     ) { }
@@ -21,7 +22,7 @@ export class HomePageComponent implements OnInit {
     }
 
     @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
-        const scrollPosition = window.pageYOffset;
+        const scrollPosition = this.window.pageYOffset;
         this.push = scrollPosition;
       }
 
@@ -36,7 +37,7 @@ export class HomePageComponent implements OnInit {
         var ctx = canvas.getContext("2d");
 
         //Lets make the canvas occupy the full page
-        var W = window.innerWidth, H = window.innerHeight;
+        var W = this.window.innerWidth, H = this.window.innerHeight;
         canvas.width = W;
         canvas.height = 681;
 
