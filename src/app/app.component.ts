@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
-import {Router, NavigationEnd} from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +11,9 @@ import {Router, NavigationEnd} from '@angular/router';
 export class AppComponent {
   title = 'app';
   constructor(
-    
+
     public router: Router
   ) {
-    
+
   }
 }

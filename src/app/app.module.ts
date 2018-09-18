@@ -88,11 +88,9 @@ const appRoutes: Routes = [
     SuccessComponent,
 
   ],
-  imports:[
- CommonModule,
-NgtUniversalModule,
- 
-    
+  imports: [
+    CommonModule,
+    NgtUniversalModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
